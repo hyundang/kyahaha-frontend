@@ -86,7 +86,7 @@ const MainPage = () => {
         <>  
             <TitleContainer value={{nickname}}></TitleContainer>
             <PartWrap>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[0]} mouseEnter={mouseEnter('aaa')} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[0]} mouseEnter={() => mouseEnter('aaa')} mouseLeave={mouseLeave}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[1]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[2]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[3]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
