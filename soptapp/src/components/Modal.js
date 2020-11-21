@@ -8,12 +8,12 @@ const BackContainer = style.div`
     z-index: 1000;
     width: 100vw;
     height : 100vh;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
 `;
 
 const Wrap = style.div`
     position: absolute;
-    top: 25vh;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,11 +25,9 @@ display : flex;
 flex-direction:column;
 align-items:center;
 position : absolute;
-background: #FFFFFF;
 width: 75.6250vw;
 height: 20.2778vw;
-border: 1px solid rgba(0,0,0,0.2);
-border-radius: 7.4306vw;
+color: white;
 `;
 const DateContainer = style.div`
 display: flex;
@@ -57,15 +55,16 @@ margin-top: 25vw;
 display : flex;
 justify-content:center;
 align-items:center;
-background: #FFFFFF;
+background: #EF8138;
 width: 32.9861vw;
 height: 6.2500vw;
-border: 1px solid rgba(0,0,0,0.2);
+border: 1px solid #EF8138;
 border-radius: 7.4306vw;
 font-weight: bold;
 font-size: 3.4722vw;
 line-height: 5.1389vw;
 cursor : pointer;
+color: white;
 `;
 const Modal = ({isClick, history}) => {
     let date = new Date();
