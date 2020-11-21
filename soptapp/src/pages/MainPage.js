@@ -3,7 +3,6 @@ import PartContainer from '../containers/Main/PartContainer';
 import React, {useState,useEffect,useRef} from 'react'
 import Modal from '../components/Modal';
 import style from 'styled-components';
-import Modal from '../components/Modal';
 import {useDispatch,useSelector} from 'react-redux';
 import {clickChange} from '../modules/ClickChange';
 
@@ -43,17 +42,6 @@ const partInfo = [
         subTitle: "aaaaa"
     },
 ]
-
-const Clock = style.div`
-    display : flex;
-    justify-content : center;
-    align-items:center;
-    font-size : 30px;
-    position:absolute;
-    top : 45%;
-    left : 45%;
-    font-weight: 500;
-`;
 
 
 const MainPage = () => {
