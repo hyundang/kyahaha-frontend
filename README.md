@@ -2,7 +2,11 @@
 
 ![badge](https://img.shields.io/badge/Part-Front--end-brightgreen) ![lang](https://img.shields.io/badge/Language-JavaScript-blue) ![react](https://img.shields.io/badge/Tech--stack-React-orange) ![realease](https://img.shields.io/badge/release-v1.0.0-yellow)
 
-> 일 중독자 솝트인들을 위한 안내서!
+## 📍 team service
+
+ <b>솝트인을 위한 솝트레퍼런스 </b>
+
+ 멈추면 비로소 할 수 있는 것들, 솝트를 위한 휴식 레퍼런스 FISHING. 
 
 
 
