@@ -1,4 +1,4 @@
-# 👨‍👩‍👦‍👦For Ideal SOPT Hitchhiking👨‍👩‍👦‍👦
+# For Ideal SOPT Hitchhiking
 
 > 일 중독자 솝트인들을 위한 안내서!
 
