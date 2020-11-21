@@ -1,9 +1,9 @@
 import HealingContainer from '../containers/Healing/HealingContainer';
 
-const HealingPage = () => {
+const HealingPage = ({history}) => {
     return(
         <>
-            <HealingContainer/>
+            <HealingContainer history = {history}/>
         </>
     )
 }

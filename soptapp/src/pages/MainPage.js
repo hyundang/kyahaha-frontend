@@ -94,7 +94,7 @@ const MainPage = () => {
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[5]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
             </PartWrap>
 
-            {/* <Modal isClick={isClick}/> */}
+            <Modal isClick={isClick}/>
         </>
     )
 }

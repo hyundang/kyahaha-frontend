@@ -7,7 +7,7 @@ const BackContainer = style.div`
     z-index: 1000;
     width: 100vw;
     height : 100vh;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(23, 23, 23, 0.8);
 `;
 
 const Wrap = style.div`
@@ -24,11 +24,8 @@ display : flex;
 flex-direction:column;
 align-items:center;
 position : absolute;
-background: #FFFFFF;
 width: 75.6250vw;
 height: 20.2778vw;
-border: 1px solid rgba(0,0,0,0.2);
-border-radius: 7.4306vw;
 `;
 const DateContainer = style.div`
 display: flex;
@@ -39,6 +36,8 @@ height: 5.1389vw;
 font-weight: bold;
 font-size: 3.4722vw;
 line-height: 5.1389vw;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const TimeContainer = style.div`
@@ -49,6 +48,8 @@ width: 68.6806vw;
 height: 15.4167vw;
 font-weight: bold;
 font-size: 9.4167vw;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const Button = style.div`
@@ -56,7 +57,6 @@ margin-top: 25vw;
 display : flex;
 justify-content:center;
 align-items:center;
-background: #FFFFFF;
 width: 32.9861vw;
 height: 6.2500vw;
 border: 1px solid rgba(0,0,0,0.2);
@@ -65,6 +65,7 @@ font-weight: bold;
 font-size: 3.4722vw;
 line-height: 5.1389vw;
 cursor : pointer;
+color: #FEFEFE;
 `;
 const Modal = ({isClick, history}) => {
     let date = new Date();
