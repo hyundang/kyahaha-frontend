@@ -1,12 +1,12 @@
 import React, {useState,useEffect,useRef} from 'react'
-import styled from 'styled-components';
+import style from 'styled-components';
 
-const BackContainer = styled.div`
+const BackContainer = style.div`
     width: 100vw;
     height : 100vh;
     background: rgba(30, 30, 30, 0.7);
 `;
-const ModalContainer = styled.div`
+const ModalContainer = style.div`
 display : flex;
 flex-direction:column;
 justify-content:center;
@@ -20,7 +20,7 @@ height: 436px;
 border: 1px solid rgba(0,0,0,0.2);
 border-radius: 107px;
 `;
-const DateContainer = styled.div`
+const DateContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
@@ -31,7 +31,7 @@ font-size: 50px;
 line-height: 74px;
 `;
 
-const TimeContainer = styled.div`
+const TimeContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
@@ -41,14 +41,14 @@ font-weight: bold;
 font-size: 150px;
 `;
 
-const Button = styled.div`
+const Button = style.div`
 display : flex;
 justify-content:center;
 align-items:center;
 position: absolute;
 background: #FFFFFF;
 top: 60%;
-left : 48%;
+left : 46%;
 width: 475px;
 height: 90px;
 border: 1px solid rgba(0,0,0,0.2);
@@ -71,7 +71,7 @@ const Modal = () => {
     const [second,setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
 
     const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
-    const onAutoIncrease = () => {
+    const onAutoIncrease = () => {  
         setHour(date.getHours());
         setMinute(date.getMinutes());
         setSecond(date.getSeconds());
