@@ -1,8 +1,10 @@
 # For Ideal SOPT Hitchhiking
 
+![badge](https://img.shields.io/badge/Part-Front--end-brightgreen) ![lang](https://img.shields.io/badge/Language-JavaScript-blue) ![react](https://img.shields.io/badge/Tech--stack-React-orange) ![realease](https://img.shields.io/badge/release-v1.0.0-yellow)
+
 > 일 중독자 솝트인들을 위한 안내서!
 
-![badge](https://img.shields.io/badge/Part-Front--end-brightgreen) ![lang](https://img.shields.io/badge/Language-JavaScript-blue) ![react](https://img.shields.io/badge/Tech--stack-React-orange) ![realease](https://img.shields.io/badge/release-v1.0.0-yellow)
+
 
 <img src="./images/logo.png" alt="drawing" width="200"/>
 
