@@ -24,7 +24,7 @@ const Text = style.div`
 
 const Space = style.div`
     width: 100vw;
-    height: 10vw;
+    height: 5vw;
 `;
 
 const PostListPage = () => {
@@ -35,6 +35,7 @@ const PostListPage = () => {
                 <Space />
                 <Text>멈추면 비로소 할 수 있는 것들</Text>
                 <Text>당신을 위한 휴식 레퍼런스</Text>
+                <Space />
             </TextWrap>
             <PostListContainer />
         </Wrap>

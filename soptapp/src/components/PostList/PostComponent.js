@@ -15,10 +15,13 @@ const PostWrap = style.div`
 `;
 
 const PostText = style.div`
+    width: 15vw;
+    height: 20vw;
+    padding: 8vw 2.5vw;
     color: white;
     font-size: 2vw;
     text-align: center;
-    width: 15vw;
+    background-color: rgba(0,0,0,0.4);
 `;
 
 const PostProfileWrap = style.div`
