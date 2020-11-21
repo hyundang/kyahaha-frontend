@@ -29,6 +29,13 @@
 
 ## 💻 Getting Started
 
+## 🎞 Using Tech
+```React
+   Redux
+```
+
+
+<br />
 ### Installation
 ```bash
 $ git clone https://github.com/soptkerthon-kyahaha/kyahaha-frontend.git
