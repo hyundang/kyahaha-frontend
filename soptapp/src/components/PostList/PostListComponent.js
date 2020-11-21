@@ -42,22 +42,6 @@ const PostListComponent = () => {
                         // console.log('테스트 : ', post);
                         return (<PostComponent key={i} post={post}/>)
                     })}
-                    {posts.map((post, i) => {
-                        // console.log('테스트 : ', post);
-                        return (<PostComponent key={i} post={post}/>)
-                    })}
-                    {posts.map((post, i) => {
-                        // console.log('테스트 : ', post);
-                        return (<PostComponent key={i} post={post}/>)
-                    })}
-                    {posts.map((post, i) => {
-                        // console.log('테스트 : ', post);
-                        return (<PostComponent key={i} post={post}/>)
-                    })}
-                    {posts.map((post, i) => {
-                        // console.log('테스트 : ', post);
-                        return (<PostComponent key={i} post={post}/>)
-                    })}
                 </PostWrap> 
             </Wrap>
         </>

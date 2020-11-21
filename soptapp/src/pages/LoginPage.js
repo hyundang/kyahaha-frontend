@@ -3,6 +3,7 @@ import InputContainer from '../containers/Login/InputContainer';
 import style from 'styled-components';
 import LoadingPage from './LoadingPage';
 
+
 const Wrap = style.div`
     width: 100vw;
     height: 100vh;
@@ -16,7 +17,8 @@ const Wrap = style.div`
 
 const LoginPage = ({history}) => {
     return(
-        <>
+        <>  
+            <LoadingPage />
             <Wrap>
                 <LogoContainer />
                 <InputContainer history={history}/>
