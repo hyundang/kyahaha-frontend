@@ -20,10 +20,10 @@ const SubTitle = style.div`
     text-align: center;
 `;
 
-const PartComponent = ({partInfo}) => {
+const PartComponent = ({onClick, partInfo}) => {
     return(
         <>
-            <Part>
+            <Part onClick={onClick}>
                 <Title>{partInfo.title}</Title>
                 <SubTitle>{partInfo.subTitle}</SubTitle>
             </Part>
