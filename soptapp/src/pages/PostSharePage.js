@@ -193,7 +193,7 @@ const PostSharePage = () => {
       console.log(image);
       const post = await axios({
         method: "post",
-        url: "http://localhost:3000/api/posts",
+        url: "http://52.78.212.95:3000/api/posts",
         headers: {
           "Content-Type": "multipart/form-data",
         },
