@@ -2,7 +2,7 @@ import React, {useState,useEffect,useRef} from 'react'
 import style from 'styled-components';
 
 const BackContainer = style.div`
-    display: ${props=>props.isClick ? 'box' : 'none'};
+    display: ${props=>props.isClick ? 'block' : 'none'};
     position: absolute;
     top: 0;
     z-index: 1000;
