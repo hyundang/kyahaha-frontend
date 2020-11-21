@@ -13,71 +13,72 @@ const ModalContainer = style.div`
 display : flex;
 flex-direction:column;
 justify-content:center;
-position:absolute;
 align-items:center;
-left : 40%;
-top : 35%;
+position : absolute;
+top : 25%;
+left : 12%;
 background: #FFFFFF;
-width: 1233px;
-height: 436px;
+width: 75.6250vw;
+height: 20.2778vw;
 border: 1px solid rgba(0,0,0,0.2);
-border-radius: 107px;
+border-radius: 7.4306vw;
 `;
 const DateContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
-width: 590px;
-height: 74px;
+width: 40.9722vw;
+height: 5.1389vw;
 font-weight: bold;
-font-size: 50px;
-line-height: 74px;
+font-size: 3.4722vw;
+line-height: 5.1389vw;
 `;
 
 const TimeContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
-width: 989px;
-height: 222px;
+width: 68.6806vw;
+height: 15.4167vw;
 font-weight: bold;
-font-size: 150px;
+font-size: 9.4167vw;
 `;
 
 const Button = style.div`
 display : flex;
 justify-content:center;
 align-items:center;
-position: absolute;
 background: #FFFFFF;
-top: 60%;
-left : 46%;
-width: 475px;
-height: 90px;
+position : absolute;
+left : 34%;
+bottom : 16%;
+width: 32.9861vw;
+height: 6.2500vw;
 border: 1px solid rgba(0,0,0,0.2);
-border-radius: 107px;
+border-radius: 7.4306vw;
 font-weight: bold;
-font-size: 50px;
-line-height: 74px;
+font-size: 3.4722vw;
+line-height: 5.1389vw;
 cursor : pointer;
 `;
-const Modal = ({isClick}) => {
+const Modal = ({isClick, history}) => {
     let date = new Date();
     const year = date.getFullYear();
     const month = date.getMonth();
     const clockDate = date.getDate();
     const day = date.getDay();
-    const mili = date.getMilliseconds();
     const week = ['일', '월', '화', '수', '목', '금', '토'];
     const [hour,setHour] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
     const [minute,setMinute] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
     const [second,setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+    const [mili,setMili] = useState(0);
 
     const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
     const onAutoIncrease = () => {  
         setHour(date.getHours());
         setMinute(date.getMinutes());
         setSecond(date.getSeconds());
+        setMili(date.getMilliseconds());
     }
     // react에서 Interval 사용할때 아래와 같이 사용해아함
     useEffect(() => {
@@ -88,9 +89,16 @@ const Modal = ({isClick}) => {
         function tick() {
             tmp.current();
         } 
-        let id = setInterval(tick, 1000);
+        let id = setInterval(tick, 1);
         return () => clearInterval(id);
     },[])
+
+    
+    const onHandleClick = (e) => {
+        e.preventDefault();
+        history.push('/healing');
+    }
+
 
     return(
         <>
@@ -101,11 +109,11 @@ const Modal = ({isClick}) => {
                 {year}년 {month+1}월 {clockDate}일 {week[day]}요일
                 </DateContainer>
                 <TimeContainer>
-                {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
+                {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()} : {mili.toLocaleString()}
                 </TimeContainer>
 
             </ModalContainer>
-            <Button>
+            <Button onClick={onHandleClick}>
                 멈추면 보이는 것들
             </Button>
         </BackContainer>

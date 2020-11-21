@@ -80,7 +80,9 @@ const MainPage = () => {
         <>  
             <TitleContainer value={{nickname}}></TitleContainer>
             <PartWrap>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[0]}/>
+                <PartContainer 
+                    
+                    onClick={onHandleClick} partInfo={partInfo[0]}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[1]}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[2]}/>
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[3]}/>
