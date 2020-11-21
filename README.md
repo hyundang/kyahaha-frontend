@@ -4,10 +4,17 @@
 
 ![badge](https://img.shields.io/badge/Part-Front--end-brightgreen) ![lang](https://img.shields.io/badge/Language-JavaScript-blue) ![react](https://img.shields.io/badge/Tech--stack-React-orange) ![realease](https://img.shields.io/badge/release-v1.0.0-yellow)
 
-![](   )
+<img src="./images/logo.png" alt="drawing" width="200"/>
 
 ## :baby_chick: Demo
-![](   )
+<p float="left">
+  <img src="./images/1.png" alt="drawing" width="470"/>
+  <img src="./images/2.png" alt="drawing" width="470"/>
+  <img src="./images/3.png" alt="drawing" width="470"/>
+  <img src="./images/4.png" alt="drawing" width="470"/>
+  <img src="./images/5.png" alt="drawing" width="470"/>
+  <img src="./images/6.png" alt="drawing" width="470"/>
+</p>
 
 ## 🔧 Credit
 - **Language**: JavaScript
