@@ -16,7 +16,7 @@ const LogoImg = style.img`
 
 const TextWrap = style.div`
     width: 100vw;
-    height: 35vh;
+    height: 37vh;
     position: fixed;
     display: flex;
     justify-content: center;

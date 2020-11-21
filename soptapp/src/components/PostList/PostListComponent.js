@@ -8,7 +8,7 @@ const Wrap = style.div`
     margin-left: -33vw;
     left: 50%;
     width: 100vw;
-    top: 37vh;
+    top: 38vh;
     overflow: hidden;
     z-index: -1;
 `;
