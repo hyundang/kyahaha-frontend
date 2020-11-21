@@ -1,13 +1,16 @@
-//import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import MainPage from './pages/MainPage';
+import LoginPage from './pages/LoginPage';
 import Modal from './components/Modal';
 
 
 const App = () => {
   return (
     <Router>
-      <Route path='/' component={MainPage} />
+      <Switch>
+        <Route path='/' exact component={LoginPage} />
+        <Route path='/main' component={MainPage} />
+      </Switch>
     </Router>
   );
 }

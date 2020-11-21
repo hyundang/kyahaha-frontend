@@ -6,15 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-<<<<<<< Updated upstream
   font-size: 10px;
   box-sizing: border-box;
-=======
-  font-size : 10px;
->>>>>>> Stashed changes
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
