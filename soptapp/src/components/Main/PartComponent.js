@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import style from 'styled-components';
 
 const Part = style.div`
@@ -20,10 +21,11 @@ const SubTitle = style.div`
     text-align: center;
 `;
 
-const PartComponent = ({onClick, partInfo}) => {
+
+const PartComponent = ({onClick, partInfo, mouseEnter, mouseLeave}) => {
     return(
         <>
-            <Part onClick={onClick} img={partInfo.img}>
+            <Part onClick={onClick} img={partInfo.img} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                 <Title>{partInfo.title}</Title>
                 <SubTitle>{partInfo.subTitle}</SubTitle>
             </Part>

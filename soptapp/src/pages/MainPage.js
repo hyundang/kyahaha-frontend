@@ -22,7 +22,6 @@ import main_web_BW from '../assets/main/main_web_BW.jpg';
 
 
 
-
 const PartWrap = style.div`
     position: absolute;
     z-index: 0;
@@ -74,20 +73,25 @@ const MainPage = () => {
         dispatch(clickChange(true));
     }
 
-    
+    const mouseEnter = (e) => {
+        console.log(e);
+        console.log('mouseenter');
+    }
+
+    const mouseLeave = (e) => {
+        console.log('mouseleave');
+    }
 
     return(
         <>  
             <TitleContainer value={{nickname}}></TitleContainer>
             <PartWrap>
-                <PartContainer 
-                    
-                    onClick={onHandleClick} partInfo={partInfo[0]}/>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[1]}/>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[2]}/>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[3]}/>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[4]}/>
-                <PartContainer onClick={onHandleClick} partInfo={partInfo[5]}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[0]} mouseEnter={mouseEnter('aaa')} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[1]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[2]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[3]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[4]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
+                <PartContainer onClick={onHandleClick} partInfo={partInfo[5]} mouseEnter={mouseEnter} mouseLeave={mouseLeave}/>
             </PartWrap>
 
             {/* <Modal isClick={isClick}/> */}
