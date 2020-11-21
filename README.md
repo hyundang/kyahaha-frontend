@@ -41,10 +41,10 @@ $ npm start
 
 | **🙋 [김동관](https://github.com/dk-master)** | **🙋‍ [박재성](https://github.com/dudgns3tp)** | **🙋‍ [이현진](https://github.com/junyup0319)** |
 | :---: |:---:| :---:|
-| [![FVCproductions](https://avatars3.githubusercontent.com/u/61861809?s=460&u=f834deb744174671e44ea2b579f8bfe22e280de2&v=4)]()    | [![FVCproductions](https://avatars1.githubusercontent.com/u/40652160?s=460&u=9cd767fc9ae0adc0948fec0fb7c4fe126a64ffae&v=4)]() | [![FVCproductions](https://avatars2.githubusercontent.com/u/39546874?s=460&u=049590b1c31828d01c5555b4c34d1c414a0711ba&v=4)]()  |
+| [![FVCproductions](https://avatars3.githubusercontent.com/u/61861809?s=460&u=f834deb744174671e44ea2b579f8bfe22e280de2&v=4)]()    | [![FVCproductions](https://avatars2.githubusercontent.com/u/41244373?s=400&u=0dfb104703811c4f853e49e4a901890fa6f0401a&v=4)]() | [![FVCproductions](https://avatars2.githubusercontent.com/u/39546874?s=460&u=049590b1c31828d01c5555b4c34d1c414a0711ba&v=4)]()  |
 | 웹 개발자 | 웹 개발자| 웹 개발자|
-|rdb설계  <br /> 배포 환경 구축 <br /> 회원가입, 로그인 <br /> 그룹 인증 관리 <br /> 그룹 리스트 조회  <br />|rdb설계 <br /> 배포 환경 구축 <br /> place 업로드 <br /> 지하철 API <br /> 네이버 지도 API |rdb설계 <br /> 배포 환경 구축 <br /> 장소 검색 필터링 <br /> 장소 검색 API <br /> 장소 검색 sorting|
-| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**|
+|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br> |컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|
+| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![p|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br> lacepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**|
 |마이페이지 & 랭킹|좋아요 & 북마크 Interaction|마이페이지 & 랭킹| 
   
 <br />
