@@ -1,13 +1,13 @@
+//import './App.css';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import MainPage from './pages/MainPage';
 
-const App = () => {
+
+function App() {
   return (
-    <>
-      <Router>
-        <Route path='/' component={MainPage} />
-      </Router>
-    </>
+    <Router>
+      <Route path='/' component={MainPage} />
+    </Router>
   );
 }
 
