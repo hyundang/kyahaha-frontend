@@ -105,7 +105,7 @@ const Modal = ({isClick, history}) => {
     
     const onHandleClick = (e) => {
         e.preventDefault();
-        history.push('/healing');
+        history.push('/post');
     }
 
 

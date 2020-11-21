@@ -1,4 +1,5 @@
 import HealingContainer from '../containers/Healing/HealingContainer';
+import LoadingPage from './LoadingPage';
 
 const HealingPage = ({history}) => {
     return(

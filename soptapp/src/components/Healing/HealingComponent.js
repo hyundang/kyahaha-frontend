@@ -77,7 +77,7 @@ const Button = style.div`
     `;
 
     const HealingComponent = ({count,setCount,onClick}) => {
-        const [image, setImage] = useState([]); 
+        const [image, setImage] = useState('https://sopt-27-wooyeong.s3.ap-northeast-2.amazonaws.com/images/soptkerthon/healing/image054.jpg'); 
         console.log('초기화')
         //const [count,setCount] = useState(0);
     
