@@ -1,5 +1,5 @@
-<<<<<<< Updated upstream
 import PartContainer from '../containers/Main/PartContainer';
+import React, {useState,useEffect,useRef} from 'react'
 import style from 'styled-components';
 
 const PartWrap = style.div`
@@ -36,11 +36,8 @@ const partInfo = [
         subTitle: "aaaaa"
     },
 ]
-=======
-import React, {useState,useEffect,useRef} from 'react'
-import styled from 'styled-components';
 
-const Clock = styled.div`
+const Clock = style.div`
     display : flex;
     justify-content : center;
     align-items:center;
@@ -50,7 +47,6 @@ const Clock = styled.div`
     left : 45%;
     font-weight: 500;
 `;
->>>>>>> Stashed changes
 const MainPage = () => {
     let date = new Date();
     const [hour,setHour] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
@@ -77,7 +73,6 @@ const MainPage = () => {
     },[])
 
     return(
-<<<<<<< Updated upstream
         <> 
             <PartWrap>
                 <PartContainer partInfo={partInfo[0]}/>
@@ -87,15 +82,9 @@ const MainPage = () => {
                 <PartContainer partInfo={partInfo[4]}/>
                 <PartContainer partInfo={partInfo[5]}/>
             </PartWrap>
-            
-=======
-        <>
-        <Clock>
-            clock : {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
-
-        </Clock>
-
->>>>>>> Stashed changes
+            <Clock>
+                clock : {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
+            </Clock>
         </>
     )
 }
