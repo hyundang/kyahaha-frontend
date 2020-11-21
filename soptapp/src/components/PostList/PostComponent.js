@@ -12,15 +12,27 @@ const PostWrap = style.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 `;
 
 const PostText = style.div`
     width: 15vw;
-    height: 20vw;
-    padding: 8vw 2.5vw;
+    padding: 0vw 2.5vw;
     color: white;
     font-size: 2vw;
     text-align: center;
+    z-index: 150;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+`;
+
+const PostBack = style.div`
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    z-index: 100;
     background-color: rgba(0,0,0,0.4);
 `;
 
@@ -55,6 +67,7 @@ const PostComponent = ({post}) => {
         <>
         <PostWrap image={post.postImageUrl}>
             <PostText>{post.contents}</PostText>
+            <PostBack />
             {/*
             <PostProfileWrap>
                 <PostImg src={post.postImageUrl}/>
