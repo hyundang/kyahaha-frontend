@@ -9,20 +9,30 @@ const Wrap = style.div`
 
 const TextWrap = style.div`
     width: 100vw;
+    height: 25vh;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    background-color: white;
 `;
 
 const Text = style.div`
-
+    font-size: 3vw;
+    font-weight: bold;
+    margin-left: 16vw;
 `;
 
+const Space = style.div`
+    width: 100vw;
+    height: 10vw;
+`;
 
 const PostListPage = () => {
     return(
         <>
         <Wrap>
             <TextWrap>
+                <Space />
                 <Text>멈추면 비로소 할 수 있는 것들</Text>
                 <Text>당신을 위한 휴식 레퍼런스</Text>
             </TextWrap>

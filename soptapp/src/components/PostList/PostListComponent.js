@@ -4,12 +4,22 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 const Wrap = style.div`
-    width: 80vw;
-    height: 80vh;
+    position: absolute;
+    margin-left: -33vw;
+    left: 50%;
+    width: 100vw;
+    top: 30vh;
+    overflow: hidden;
+    z-index: -1;
+    
+`;
+
+const PostWrap = style.div`
+    position: relative;
+    width: 66vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 `;
-
 
 
 
@@ -27,10 +37,28 @@ const PostListComponent = () => {
     return(
         <>
             <Wrap>
-            {posts.map((post, i) => {
-                // console.log('테스트 : ', post);
-                return (<PostComponent key={i} post={post}/>)
-            })}
+               <PostWrap>
+                    {posts.map((post, i) => {
+                        // console.log('테스트 : ', post);
+                        return (<PostComponent key={i} post={post}/>)
+                    })}
+                    {posts.map((post, i) => {
+                        // console.log('테스트 : ', post);
+                        return (<PostComponent key={i} post={post}/>)
+                    })}
+                    {posts.map((post, i) => {
+                        // console.log('테스트 : ', post);
+                        return (<PostComponent key={i} post={post}/>)
+                    })}
+                    {posts.map((post, i) => {
+                        // console.log('테스트 : ', post);
+                        return (<PostComponent key={i} post={post}/>)
+                    })}
+                    {posts.map((post, i) => {
+                        // console.log('테스트 : ', post);
+                        return (<PostComponent key={i} post={post}/>)
+                    })}
+                </PostWrap> 
             </Wrap>
         </>
     )
