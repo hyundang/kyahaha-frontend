@@ -9,14 +9,21 @@ const BackContainer = style.div`
     height : 100vh;
     background: rgba(0, 0, 0, 0.3);
 `;
+
+const Wrap = style.div`
+    position: absolute;
+    top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+`;
+
 const ModalContainer = style.div`
 display : flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 position : absolute;
-top : 25%;
-left : 12%;
 background: #FFFFFF;
 width: 75.6250vw;
 height: 20.2778vw;
@@ -45,13 +52,11 @@ font-size: 9.4167vw;
 `;
 
 const Button = style.div`
+margin-top: 25vw;
 display : flex;
 justify-content:center;
 align-items:center;
 background: #FFFFFF;
-position : absolute;
-left : 34%;
-bottom : 16%;
 width: 32.9861vw;
 height: 6.2500vw;
 border: 1px solid rgba(0,0,0,0.2);
@@ -103,19 +108,21 @@ const Modal = ({isClick, history}) => {
     return(
         <>
         <BackContainer isClick={isClick}>
-            <ModalContainer>
+            <Wrap>
+                <ModalContainer>
 
-                <DateContainer>
-                {year}년 {month+1}월 {clockDate}일 {week[day]}요일
-                </DateContainer>
-                <TimeContainer>
-                {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()} : {mili.toLocaleString()}
-                </TimeContainer>
+                    <DateContainer>
+                    {year}년 {month+1}월 {clockDate}일 {week[day]}요일
+                    </DateContainer>
+                    <TimeContainer>
+                    {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()} : {mili.toLocaleString()}
+                    </TimeContainer>
 
-            </ModalContainer>
-            <Button onClick={onHandleClick}>
-                멈추면 보이는 것들
-            </Button>
+                </ModalContainer>
+                <Button onClick={onHandleClick}>
+                    멈추면 보이는 것들
+                </Button>
+            </Wrap>
         </BackContainer>
         </>
 
