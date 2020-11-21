@@ -8,9 +8,15 @@ const Wrap = style.div`
     height: 100vh;
 `;
 
+const LogoImg = style.img`
+    width: 7vw;
+    height: 7vw;
+    margin-top: 2vw;
+`;
+
 const TextWrap = style.div`
     width: 100vw;
-    height: 25vh;
+    height: 35vh;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -22,13 +28,13 @@ const TextWrap = style.div`
 const TextOne = style.div`
     font-size: 1.3vw;
     font-weight: bold;
-    margin-left: 16vw;
+    color: #747272;
+    margin-top: 2vw;
 `;
 
 const TextTwo = style.div`
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: bold;
-    margin-left: 16vw;
 `;
 
 const Space = style.div`
@@ -42,6 +48,7 @@ const PostListPage = () => {
         <Wrap>
             <TextWrap>
                 <Space />
+                <LogoImg src={logo} />
                 <TextOne>멈추면 비로소 할 수 있는 것들</TextOne>
                 <TextTwo>당신을 위한 휴식 레퍼런스</TextTwo>
                 <Space />

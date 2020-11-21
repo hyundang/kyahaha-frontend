@@ -8,10 +8,13 @@ const Wrap = style.div`
     margin-left: -33vw;
     left: 50%;
     width: 100vw;
-    top: 25vh;
+    top: 37vh;
     overflow: hidden;
     z-index: -1;
-    
+`;
+
+const Space = style.div`
+    height: 3vh;
 `;
 
 const PostWrap = style.div`
@@ -21,7 +24,28 @@ const PostWrap = style.div`
     grid-template-columns: 1fr 1fr 1fr;
 `;
 
+const FooterWrap = style.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    margin-right: 33vw;
+`;
 
+const TextWrap = style.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    width: 30vw;
+`;
+
+const Text = style.div`
+    font-size: 1vw;
+    color: #8E8E8E;
+    margin-bottom: 1vw;
+`;
 
 const PostListComponent = () => {
     const [posts, setPosts] = useState([]);
@@ -37,12 +61,26 @@ const PostListComponent = () => {
     return(
         <>
             <Wrap>
-               <PostWrap>
+                <Space />
+                <PostWrap>
                     {posts.map((post, i) => {
                         // console.log('테스트 : ', post);
                         return (<PostComponent key={i} post={post}/>)
                     })}
+                    <Space />
                 </PostWrap> 
+                <FooterWrap>
+                    <TextWrap>
+                        <Text>소개</Text>
+                        <Text>블로그</Text>
+                        <Text>도움말</Text>
+                        <Text>API</Text>
+                        <Text>개인정보처리방침</Text>
+                        <Text>약관</Text>
+                        <Text>위치</Text>
+                    </TextWrap>
+                    <Text>ⓒ 2020 Fishing from SOPT</Text>
+                </FooterWrap>
             </Wrap>
         </>
     )

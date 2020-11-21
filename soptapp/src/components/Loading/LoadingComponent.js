@@ -18,9 +18,9 @@ const Wrap = style.div`
     background-color: white;
     opacity: 0;
 
-    animation: fadeout 2s;
-    -moz-animation: fadeout 2s; /* Firefox */
-    -webkit-animation: fadeout 2s; /* Safari and Chrome */
+    animation: fadeout 3s;
+    -moz-animation: fadeout 3s; /* Firefox */
+    -webkit-animation: fadeout 3s; /* Safari and Chrome */
     -o-animation: fadeout 2s; /* Opera */
     @keyframes fadeout {
         from {
@@ -77,7 +77,7 @@ const LoadingComponent = () => {
      useEffect(() => {
          setInterval(() => {
              setIsFlex(false);
-         }, 2000);
+         }, 3000);
      }, [])
 
 
