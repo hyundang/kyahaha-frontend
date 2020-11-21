@@ -11,11 +11,10 @@ const Form = style.form`
 `;
 
 const NickWrap = style.div`
-    display: flex;
-    flex-direction: row;
-    width: 30vw;
     position: absolute;
-    margin-left: 7vw;
+    width: 42vw;
+    padding-left: 7vw;
+    height: 10vw;
     margin-top: 10vw;
 `;
 
