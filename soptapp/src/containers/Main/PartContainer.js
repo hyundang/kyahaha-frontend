@@ -1,14 +1,16 @@
 import PartComponent from '../../components/Main/PartComponent';
 
 
-const PartContainer = ({partInfo, onClick, mouseEnter, mouseLeave}) => {
+const PartContainer = ({onClick, id, onHandleMouseOver, onHandleMouseLeave, partInfo}) => {
+    
     return(
         <>
             <PartComponent 
-                onClick={onClick} 
                 partInfo={partInfo}
-                mouseEnter={mouseEnter}
-                mouseLeave={mouseLeave}/>
+                id={id}
+                onClick={onClick}
+                onHandleMouseOver={onHandleMouseOver}
+                onHandleMouseLeave={onHandleMouseLeave}/>
         </>
     );
 }

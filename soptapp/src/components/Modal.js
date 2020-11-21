@@ -2,17 +2,18 @@ import React, {useState,useEffect,useRef} from 'react'
 import style from 'styled-components';
 
 const BackContainer = style.div`
-    display: ${props=>props.isClick ? 'box' : 'none'};
+    display: ${props=>props.isClick ? 'block' : 'none'};
     position: absolute;
+    top: 0;
     z-index: 1000;
     width: 100vw;
     height : 100vh;
-    background: rgba(23, 23, 23, 0.8);
+    background: rgba(0, 0, 0, 0.7);
 `;
 
 const Wrap = style.div`
     position: absolute;
-    top: 25vh;
+    top: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +27,7 @@ align-items:center;
 position : absolute;
 width: 75.6250vw;
 height: 20.2778vw;
+color: white;
 `;
 const DateContainer = style.div`
 display: flex;
@@ -44,7 +46,7 @@ const TimeContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
-width: 68.6806vw;
+width: 72.6806vw;
 height: 15.4167vw;
 font-weight: bold;
 font-size: 9.4167vw;
@@ -57,15 +59,16 @@ margin-top: 25vw;
 display : flex;
 justify-content:center;
 align-items:center;
+background: #EF8138;
 width: 32.9861vw;
 height: 6.2500vw;
-border: 1px solid rgba(0,0,0,0.2);
+border: 1px solid #EF8138;
 border-radius: 7.4306vw;
 font-weight: bold;
 font-size: 3.4722vw;
 line-height: 5.1389vw;
 cursor : pointer;
-color: #FEFEFE;
+color: white;
 `;
 const Modal = ({isClick, history}) => {
     let date = new Date();
@@ -95,7 +98,7 @@ const Modal = ({isClick, history}) => {
         function tick() {
             tmp.current();
         } 
-        let id = setInterval(tick, 1);
+        let id = setInterval(tick, 2);
         return () => clearInterval(id);
     },[])
 
@@ -116,7 +119,7 @@ const Modal = ({isClick, history}) => {
                     {year}년 {month+1}월 {clockDate}일 {week[day]}요일
                     </DateContainer>
                     <TimeContainer>
-                    {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()} : {mili.toLocaleString()}
+                    {hour.toLocaleString().padStart(2, '0')} : {minute.toLocaleString().padStart(2, '0')} : {second.toLocaleString().padStart(2, '0')} : {mili.toLocaleString().padStart(3, '0')}
                     </TimeContainer>
 
                 </ModalContainer>

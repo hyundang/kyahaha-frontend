@@ -1,11 +1,10 @@
 import style from 'styled-components';
-import logo from '../../assets/icon/logo_black.png';
+import logo from '../../assets/icon/logo_gray.png';
 
 const LogoWrap = style.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7vw;
 `;
 
 const LogoImg = style.img`
