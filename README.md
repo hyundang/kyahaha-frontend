@@ -44,8 +44,6 @@ $ npm start
 | [![FVCproductions](https://avatars3.githubusercontent.com/u/61861809?s=460&u=f834deb744174671e44ea2b579f8bfe22e280de2&v=4)]()    | [![FVCproductions](https://avatars2.githubusercontent.com/u/41244373?s=400&u=0dfb104703811c4f853e49e4a901890fa6f0401a&v=4)]() | [![FVCproductions](https://avatars2.githubusercontent.com/u/39546874?s=460&u=049590b1c31828d01c5555b4c34d1c414a0711ba&v=4)]()  |
 | 웹 개발자 | 웹 개발자| 웹 개발자|
 |컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br> |컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|
-| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![placepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**| **![p|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br> lacepic_bedge](https://img.shields.io/badge/placepic-sprint2-363636)**|
-|마이페이지 & 랭킹|좋아요 & 북마크 Interaction|마이페이지 & 랭킹| 
   
 <br />
 
