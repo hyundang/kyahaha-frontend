@@ -1,7 +1,7 @@
-import style from 'styled-components';
-import PostComponent from './PostComponent';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import style from "styled-components";
+import PostComponent from "./PostComponent";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const WrapConatiner = style.div`
 `;
@@ -50,42 +50,46 @@ const Text = style.div`
 `;
 
 const PostListComponent = () => {
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        async function get() {
-            const axiosPosts = await axios.get('http://52.78.212.95:3000/api/posts');
-            // console.log('통신 : ', axiosPosts);
-            const posts = axiosPosts.data.data;
-            setPosts(posts);
-        };
-        get();
-    }, [])
-    return(
-        <>
-            <Wrap>
-                <Space />
-                <PostWrap>
-                    {posts.map((post, i) => {
-                        // console.log('테스트 : ', post);
-                        return (<PostComponent key={i} post={post}/>)
-                    })}
-                    <Space />
-                </PostWrap> 
-                <FooterWrap>
-                    <TextWrap>
-                        <Text>소개</Text>
-                        <Text>블로그</Text>
-                        <Text>도움말</Text>
-                        <Text>API</Text>
-                        <Text>개인정보처리방침</Text>
-                        <Text>약관</Text>
-                        <Text>위치</Text>
-                    </TextWrap>
-                    <Text>ⓒ 2020 Fishing from SOPT</Text>
-                </FooterWrap>
-            </Wrap>
-        </>
-    )
-}
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    async function get() {
+      const axiosPosts = await axios.get("http://52.78.212.95:3000/api/posts");
+      // console.log('통신 : ', axiosPosts);
+      const posts = axiosPosts.data.data;
+      setPosts(posts);
+    }
+    get();
+  }, []);
+  return (
+    <>
+      <Wrap>
+        <Space />
+        <PostWrap>
+          {/* myArray.slice(0).reverse().map */}
+          {posts
+            .slice(0)
+            .reverse()
+            .map((post, i) => {
+              // console.log('테스트 : ', post);
+              return <PostComponent key={i} post={post} />;
+            })}
+          <Space />
+        </PostWrap>
+        <FooterWrap>
+          <TextWrap>
+            <Text>소개</Text>
+            <Text>블로그</Text>
+            <Text>도움말</Text>
+            <Text>API</Text>
+            <Text>개인정보처리방침</Text>
+            <Text>약관</Text>
+            <Text>위치</Text>
+          </TextWrap>
+          <Text>ⓒ 2020 Fishing from SOPT</Text>
+        </FooterWrap>
+      </Wrap>
+    </>
+  );
+};
 
 export default PostListComponent;
