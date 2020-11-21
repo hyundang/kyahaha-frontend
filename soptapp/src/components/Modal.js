@@ -1,10 +1,13 @@
 import React, {useState,useEffect,useRef} from 'react'
 import style from 'styled-components';
 
-const BackContainer = style.div`
+const BackContainer = styled.div`
+    display: ${props=>props.isClick ? 'box' : 'none'};
+    position: absolute;
+    z-index: 1000;
     width: 100vw;
     height : 100vh;
-    background: rgba(30, 30, 30, 0.7);
+    background: rgba(0, 0, 0, 0.3);
 `;
 const ModalContainer = style.div`
 display : flex;
@@ -58,7 +61,7 @@ font-size: 50px;
 line-height: 74px;
 cursor : pointer;
 `;
-const Modal = () => {
+const Modal = ({isClick}) => {
     let date = new Date();
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -91,21 +94,20 @@ const Modal = () => {
 
     return(
         <>
-        <BackContainer>
-        <ModalContainer>
+        <BackContainer isClick={isClick}>
+            <ModalContainer>
 
-            <DateContainer>
-            {year}년 {month+1}월 {clockDate}일 {week[day]}요일
-            </DateContainer>
-            <TimeContainer>
-            {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
-            </TimeContainer>
+                <DateContainer>
+                {year}년 {month+1}월 {clockDate}일 {week[day]}요일
+                </DateContainer>
+                <TimeContainer>
+                {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
+                </TimeContainer>
 
-        </ModalContainer>
-
-        <Button>
-            멈추면 보이는 것들
-        </Button>
+            </ModalContainer>
+            <Button>
+                멈추면 보이는 것들
+            </Button>
         </BackContainer>
         </>
 

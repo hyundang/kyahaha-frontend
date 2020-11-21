@@ -9,12 +9,12 @@ const Wrap = style.div`
     
 `;
 
-const LoginPage = () => {
+const LoginPage = ({history}) => {
     return(
         <>
             <Wrap>
                 <LogoContainer />
-                <InputContainer />
+                <InputContainer history={history}/>
             </Wrap>
         </>
     )

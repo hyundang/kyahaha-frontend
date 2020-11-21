@@ -1,14 +1,12 @@
 import InputComponent from '../../components/Login/InputComponent';
-import {react, useState} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import {nameChange, partChange} from '../../modules/NickNameChange';
 
 
-const InputContainer = () => { 
+const InputContainer = ({history}) => { 
     const dispatch = useDispatch();
-    const {name, part} = useSelector(state => ({
+    const {name} = useSelector(state => ({
         name: state.NickNameChange.name,
-        part: state.NickNameChange.part,
     }));
 
     const generateRandomNickname = () => {
@@ -56,6 +54,7 @@ const InputContainer = () => {
     const onHandleSelect = (e) => {
         dispatch(partChange(e.target.id));
         console.log(e.target.id);
+        history.push('/main');
     }
 
     
