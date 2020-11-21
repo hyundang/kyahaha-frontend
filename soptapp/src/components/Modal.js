@@ -44,7 +44,7 @@ const TimeContainer = style.div`
 display: flex;
 justify-content:center;
 align-items:center;
-width: 68.6806vw;
+width: 72.6806vw;
 height: 15.4167vw;
 font-weight: bold;
 font-size: 9.4167vw;
@@ -94,7 +94,7 @@ const Modal = ({isClick, history}) => {
         function tick() {
             tmp.current();
         } 
-        let id = setInterval(tick, 1);
+        let id = setInterval(tick, 2);
         return () => clearInterval(id);
     },[])
 
@@ -115,7 +115,7 @@ const Modal = ({isClick, history}) => {
                     {year}년 {month+1}월 {clockDate}일 {week[day]}요일
                     </DateContainer>
                     <TimeContainer>
-                    {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()} : {mili.toLocaleString()}
+                    {hour.toLocaleString().padStart(2, '0')} : {minute.toLocaleString().padStart(2, '0')} : {second.toLocaleString().padStart(2, '0')} : {mili.toLocaleString().padStart(3, '0')}
                     </TimeContainer>
 
                 </ModalContainer>
