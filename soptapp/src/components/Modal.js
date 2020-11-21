@@ -4,6 +4,7 @@ import style from 'styled-components';
 const BackContainer = style.div`
     display: ${props=>props.isClick ? 'box' : 'none'};
     position: absolute;
+    top: 0;
     z-index: 1000;
     width: 100vw;
     height : 100vh;
