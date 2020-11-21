@@ -1,4 +1,5 @@
 import PartContainer from '../containers/Main/PartContainer';
+import TitleContainer from '../containers/Main/TitleContainer';
 import React, {useState,useEffect,useRef} from 'react'
 import style from 'styled-components';
 
@@ -74,6 +75,7 @@ const MainPage = () => {
 
     return(
         <> 
+            <TitleContainer value={value}></TitleContainer>
             <PartWrap>
                 <PartContainer partInfo={partInfo[0]}/>
                 <PartContainer partInfo={partInfo[1]}/>
