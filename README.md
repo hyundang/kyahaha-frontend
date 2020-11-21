@@ -39,11 +39,11 @@ $ npm start
   
 > 💻 team developer 
 
-| **🙋 [김동관](https://github.com/dk-master)** | **🙋‍ [박재성](https://github.com/dudgns3tp)** | **🙋‍ [이현진](https://github.com/junyup0319)** |
+| **🙋 [김동관](https://github.com/dk-master)** | **🙋‍ [박재성](https://github.com/jaeseongDev)** | **🙋‍ [이현진](https://github.com/hyundang)** |
 | :---: |:---:| :---:|
 | [![FVCproductions](https://avatars3.githubusercontent.com/u/61861809?s=460&u=f834deb744174671e44ea2b579f8bfe22e280de2&v=4)]()    | [![FVCproductions](https://avatars2.githubusercontent.com/u/41244373?s=400&u=0dfb104703811c4f853e49e4a901890fa6f0401a&v=4)]() | [![FVCproductions](https://user-images.githubusercontent.com/61861809/99889744-85b95200-2c9b-11eb-99e4-8a453a8b6e07.jpg)]()  |
 | 웹 개발자 | 웹 개발자| 웹 개발자|
-|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br> |컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|
+|컴포넌트구성<br /> 시간 컴포넌트 <br /> 힐링 컴포넌트 <br /> 통신라우팅 연결 </br>|컴포넌트구성<br /> 메인페이지 <br /> 게시물 리스트 컴포넌트 <br /> 통신 라우팅 연결 </br> |컴포넌트구성<br /> 게시물리스트 컴포넌트 <br /> 힐링 컴포넌트 <br /> 랜덤선택 컴포넌트</br>|
   
 <br />
 
