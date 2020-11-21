@@ -1,6 +1,5 @@
 import TitleComponent from '../../components/Main/TitleComponent';
 
-
 const TitleContainer = ({value}) => {
     return(
         <>

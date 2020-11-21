@@ -1,9 +1,9 @@
 import style from 'styled-components';
-// import foodImg from '../../assets/image/5.png';
 
 const Part = style.div`
     border: 1px dotted #bcbcbc;
     align-items: center;
+    background-image: url(${props => props.img});
 `;
 
 const Title = style.div`
@@ -23,7 +23,7 @@ const SubTitle = style.div`
 const PartComponent = ({onClick, partInfo}) => {
     return(
         <>
-            <Part onClick={onClick}>
+            <Part onClick={onClick} img={partInfo.img}>
                 <Title>{partInfo.title}</Title>
                 <SubTitle>{partInfo.subTitle}</SubTitle>
             </Part>
