@@ -39,4 +39,4 @@ $ npm start
 ## 👨‍👩‍👧‍👦 Developer & Role
 *  **이현진** ([hyundang](https://github.com/hyundang)) - 컴포넌트 구성, 통신 라우팅 연결, 퍼블리싱
 *  **김동관** ([dk-master](https://github.com/dk-master)) - 컴포넌트 구성, 통신 라우팅 연결, 퍼블리싱
-*  **박재성** ([yeoneei](https://github.com/jaeseongDev)) - 컴포넌트 구성, 통신 라우팅 연결, 퍼블리싱
+*  **박재성** ([jaeseongDev](https://github.com/jaeseongDev)) - 컴포넌트 구성, 통신 라우팅 연결, 퍼블리싱
