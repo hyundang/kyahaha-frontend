@@ -44,7 +44,7 @@ const partInfo = [
 ]
 
 
-const MainPage = () => {
+const MainPage = ({history}) => {
     const dispatch = useDispatch();
     const {isClick} = useSelector(state => ({
         isClick: state.ClickChange.isClick,
@@ -67,7 +67,7 @@ const MainPage = () => {
                 <PartContainer onClick={onHandleClick} partInfo={partInfo[5]}/>
             </PartWrap>
 
-            <Modal isClick={isClick}/>
+            <Modal isClick={isClick} history={history}/>
         </>
     )
 }

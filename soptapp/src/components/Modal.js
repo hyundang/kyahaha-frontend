@@ -61,7 +61,7 @@ font-size: 3.4722vw;
 line-height: 5.1389vw;
 cursor : pointer;
 `;
-const Modal = ({isClick}) => {
+const Modal = ({isClick, history}) => {
     let date = new Date();
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -93,6 +93,13 @@ const Modal = ({isClick}) => {
         return () => clearInterval(id);
     },[])
 
+    
+    const onHandleClick = (e) => {
+        e.preventDefault();
+        history.push('/healing');
+    }
+
+
     return(
         <>
         <BackContainer isClick={isClick}>
@@ -106,7 +113,7 @@ const Modal = ({isClick}) => {
                 </TimeContainer>
 
             </ModalContainer>
-            <Button>
+            <Button onClick={onHandleClick}>
                 멈추면 보이는 것들
             </Button>
         </BackContainer>
