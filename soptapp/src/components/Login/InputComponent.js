@@ -3,11 +3,11 @@ import exchange from '../../assets/icon/exchange.png'
 
 
 const InputWrap = style.div`
-
+    
 `;
 
 const Form = style.form`
-
+    
 `;
 
 const NickWrap = style.div`
