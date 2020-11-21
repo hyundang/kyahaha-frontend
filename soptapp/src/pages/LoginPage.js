@@ -7,7 +7,7 @@ const Wrap = style.div`
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
