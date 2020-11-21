@@ -1,0 +1,115 @@
+import React, {useState,useEffect,useRef} from 'react'
+import styled from 'styled-components';
+
+const BackContainer = styled.div`
+    width: 100vw;
+    height : 100vh;
+    background: rgba(30, 30, 30, 0.7);
+`;
+const ModalContainer = styled.div`
+display : flex;
+flex-direction:column;
+justify-content:center;
+position:absolute;
+align-items:center;
+left : 40%;
+top : 35%;
+background: #FFFFFF;
+width: 1233px;
+height: 436px;
+border: 1px solid rgba(0,0,0,0.2);
+border-radius: 107px;
+`;
+const DateContainer = styled.div`
+display: flex;
+justify-content:center;
+align-items:center;
+width: 590px;
+height: 74px;
+font-weight: bold;
+font-size: 50px;
+line-height: 74px;
+`;
+
+const TimeContainer = styled.div`
+display: flex;
+justify-content:center;
+align-items:center;
+width: 989px;
+height: 222px;
+font-weight: bold;
+font-size: 150px;
+`;
+
+const Button = styled.div`
+display : flex;
+justify-content:center;
+align-items:center;
+position: absolute;
+background: #FFFFFF;
+top: 60%;
+left : 48%;
+width: 475px;
+height: 90px;
+border: 1px solid rgba(0,0,0,0.2);
+border-radius: 107px;
+font-weight: bold;
+font-size: 50px;
+line-height: 74px;
+cursor : pointer;
+`;
+const Modal = () => {
+    let date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const clockDate = date.getDate();
+    const day = date.getDay();
+    const mili = date.getMilliseconds();
+    const week = ['일', '월', '화', '수', '목', '금', '토'];
+    const [hour,setHour] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+    const [minute,setMinute] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+    const [second,setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+
+    const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
+    const onAutoIncrease = () => {
+        setHour(date.getHours());
+        setMinute(date.getMinutes());
+        setSecond(date.getSeconds());
+    }
+    // react에서 Interval 사용할때 아래와 같이 사용해아함
+    useEffect(() => {
+        tmp.current = onAutoIncrease;
+    });
+
+    useEffect(()=>{
+        function tick() {
+            tmp.current();
+        } 
+        let id = setInterval(tick, 1000);
+        return () => clearInterval(id);
+    },[])
+
+    return(
+        <>
+        <BackContainer>
+        <ModalContainer>
+
+            <DateContainer>
+            {year}년 {month+1}월 {clockDate}일 {week[day]}요일
+            </DateContainer>
+            <TimeContainer>
+            {hour.toLocaleString()} : {minute.toLocaleString()} : {second.toLocaleString()}
+            </TimeContainer>
+
+        </ModalContainer>
+
+        <Button>
+            멈추면 보이는 것들
+        </Button>
+        </BackContainer>
+        </>
+
+    )
+}
+
+export default Modal;

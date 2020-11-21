@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import LoginPage from './pages/LoginPage';
+import Modal from './components/Modal';
+
 
 const App = () => {
   return (
