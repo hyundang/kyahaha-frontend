@@ -13,9 +13,8 @@ const App = () => {
         <Route path="/" exact component={LoginPage} />
         <Route path="/main" component={MainPage} />
         <Route path="/healing" component={HealingPage} />
-        <Route path="/post" component={PostPage} />
+        <Route path="/post" component={PostSharePage} />
         <Route path="/postlist" component={PostListPage} />
-        <Route path="/share" component={PostSharePage} />
       </Switch>
     </Router>
   );

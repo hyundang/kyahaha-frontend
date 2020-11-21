@@ -3,11 +3,13 @@ import PostComponent from './PostComponent';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+const WrapConatiner = style.div`
+`;
 const Wrap = style.div`
-    position: absolute;
+    position: absolute;    
+    width: 100vw;
     margin-left: -33vw;
     left: 50%;
-    width: 100vw;
     top: 38vh;
     overflow: hidden;
     z-index: -1;
