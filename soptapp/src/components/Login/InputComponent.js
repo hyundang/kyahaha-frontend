@@ -1,6 +1,5 @@
-import style from 'styled-components';
-import exchange from '../../assets/icon/exchange.png'
-
+import style from "styled-components";
+import exchange from "../../assets/icon/exchange.png";
 
 const InputWrap = style.div`
     
@@ -29,7 +28,6 @@ const NickName = style.div`
     width: 25vw;
     padding-bottom: 0.7vw;
     text-align: center;
-    color: #999999;
     position: absolute;
     z-index: 0;
 `;
@@ -53,27 +51,63 @@ const PartSelect = style.input`
     margin-left: 6vw;
 `;
 
-const InputComponent = ({onHandleClick, onHandleSelect, name}) => {
-    return(
-        <>
-            <InputWrap>
-                <NickWrap>
-                    <NickName>{name}</NickName>
-                    <NickBtn src={exchange} onClick={onHandleClick}/>
-                </NickWrap>
-                <Form>
-                    <PartSelectWrap>
-                        <PartSelect id="plan" type="radio" name='part' onClick={onHandleSelect}/>기획
-                        <PartSelect id="design" type="radio" name="part" onClick={onHandleSelect} />디자인
-                        <PartSelect id="android" type="radio" name="part" onClick={onHandleSelect}/>안드로이드
-                        <PartSelect id="ios" type="radio" name="part" onClick={onHandleSelect}/>IOS
-                        <PartSelect id="server" type="radio" name="part" onClick={onHandleSelect}/>서버
-                        <PartSelect id="web" type="radio" name="part" onClick={onHandleSelect}/>웹
-                    </PartSelectWrap>
-                </Form>
-            </InputWrap>
-        </>
-    )
-}
+const InputComponent = ({ onHandleClick, onHandleSelect, name }) => {
+  return (
+    <>
+      <InputWrap>
+        <NickWrap>
+          <NickName>{name}</NickName>
+          <NickBtn src={exchange} onClick={onHandleClick} />
+        </NickWrap>
+        <Form>
+          <PartSelectWrap>
+            <PartSelect
+              id="plan"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            기획
+            <PartSelect
+              id="design"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            디자인
+            <PartSelect
+              id="android"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            안드로이드
+            <PartSelect
+              id="ios"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            IOS
+            <PartSelect
+              id="server"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            서버
+            <PartSelect
+              id="web"
+              type="radio"
+              name="part"
+              onClick={onHandleSelect}
+            />
+            웹
+          </PartSelectWrap>
+        </Form>
+      </InputWrap>
+    </>
+  );
+};
 
 export default InputComponent;

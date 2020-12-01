@@ -170,7 +170,7 @@ const ContentsInputLabel = styled.div`
   color: #b4b3b3;
 `;
 
-const PostSharePage = ({history}) => {
+const PostSharePage = ({ history }) => {
   const contentsInput = useInput("");
   const [image, setImage] = useState();
   const [didChooseImage, setDidChooseImage] = useState(false);
@@ -200,7 +200,7 @@ const PostSharePage = ({history}) => {
         data: fileData,
       });
       console.log(post);
-      history.push('/postlist');
+      history.push("/postlist");
     } catch (error) {
       console.log(error);
     }

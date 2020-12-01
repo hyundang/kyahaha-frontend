@@ -1,8 +1,8 @@
-import React, {useState,useEffect,useRef} from 'react'
-import style from 'styled-components';
+import React, { useState, useEffect, useRef } from "react";
+import style from "styled-components";
 
 const BackContainer = style.div`
-    display: ${props=>props.isClick ? 'block' : 'none'};
+    display: ${(props) => (props.isClick ? "block" : "none")};
     position: absolute;
     top: 0;
     z-index: 1000;
@@ -70,67 +70,63 @@ line-height: 5.1389vw;
 cursor : pointer;
 color: white;
 `;
-const Modal = ({isClick, history}) => {
-    let date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const clockDate = date.getDate();
-    const day = date.getDay();
-    const week = ['일', '월', '화', '수', '목', '금', '토'];
-    const [hour,setHour] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
-    const [minute,setMinute] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
-    const [second,setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
-    const [mili,setMili] = useState(0);
+const Modal = ({ isClick, history }) => {
+  let date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const clockDate = date.getDate();
+  const day = date.getDay();
+  const week = ["일", "월", "화", "수", "목", "금", "토"];
+  const [hour, setHour] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+  const [minute, setMinute] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+  const [second, setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
+  const [mili, setMili] = useState(0);
 
-    const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
-    const onAutoIncrease = () => {  
-        setHour(date.getHours());
-        setMinute(date.getMinutes());
-        setSecond(date.getSeconds());
-        setMili(date.getMilliseconds());
+  const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
+  const onAutoIncrease = () => {
+    setHour(date.getHours());
+    setMinute(date.getMinutes());
+    setSecond(date.getSeconds());
+    setMili(date.getMilliseconds());
+  };
+  // react에서 Interval 사용할때 아래와 같이 사용해아함
+  useEffect(() => {
+    tmp.current = onAutoIncrease;
+  });
+
+  useEffect(() => {
+    function tick() {
+      tmp.current();
     }
-    // react에서 Interval 사용할때 아래와 같이 사용해아함
-    useEffect(() => {
-        tmp.current = onAutoIncrease;
-    });
+    let id = setInterval(tick, 2);
+    return () => clearInterval(id);
+  }, []);
 
-    useEffect(()=>{
-        function tick() {
-            tmp.current();
-        } 
-        let id = setInterval(tick, 2);
-        return () => clearInterval(id);
-    },[])
+  const onHandleClick = (e) => {
+    e.preventDefault();
+    history.push("/healing");
+  };
 
-    
-    const onHandleClick = (e) => {
-        e.preventDefault();
-        history.push('/post');
-    }
-
-
-    return(
-        <>
-        <BackContainer isClick={isClick}>
-            <Wrap>
-                <ModalContainer>
-
-                    <DateContainer>
-                    {year}년 {month+1}월 {clockDate}일 {week[day]}요일
-                    </DateContainer>
-                    <TimeContainer>
-                    {hour.toLocaleString().padStart(2, '0')} : {minute.toLocaleString().padStart(2, '0')} : {second.toLocaleString().padStart(2, '0')} : {mili.toLocaleString().padStart(3, '0')}
-                    </TimeContainer>
-
-                </ModalContainer>
-                <Button onClick={onHandleClick}>
-                    멈추면 보이는 것들
-                </Button>
-            </Wrap>
-        </BackContainer>
-        </>
-
-    )
-}
+  return (
+    <>
+      <BackContainer isClick={isClick}>
+        <Wrap>
+          <ModalContainer>
+            <DateContainer>
+              {year}년 {month + 1}월 {clockDate}일 {week[day]}요일
+            </DateContainer>
+            <TimeContainer>
+              {hour.toLocaleString().padStart(2, "0")} :{" "}
+              {minute.toLocaleString().padStart(2, "0")} :{" "}
+              {second.toLocaleString().padStart(2, "0")} :{" "}
+              {mili.toLocaleString().padStart(3, "0")}
+            </TimeContainer>
+          </ModalContainer>
+          <Button onClick={onHandleClick}>멈추면 보이는 것들</Button>
+        </Wrap>
+      </BackContainer>
+    </>
+  );
+};
 
 export default Modal;
