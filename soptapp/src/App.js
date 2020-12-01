@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import HealingPage from "./pages/HealingPage";
-import PostPage from "./pages/PostPage";
 import PostListPage from "./pages/PostListPage";
 import PostSharePage from "./pages/PostSharePage";
 

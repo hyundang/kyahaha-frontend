@@ -1,13 +1,22 @@
-import style from 'styled-components';
-import axios from 'axios';
-import { useEffect, useState, useRef} from 'react';
-
+import style from "styled-components";
+import axios from "axios";
+import { useEffect, useState, useRef } from "react";
 
 const Container = style.div`
     height: 100vh;
-    background-image: url(${props => props.url});
+    background-color: black;
+    background-image: url(${(props) => props.url});
     transition : background-image 0.8s ease-in-out;
     background-size: cover;
+    animation: fadein 3s;
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
 `;
 
 const TextContainer = style.div`
@@ -20,7 +29,7 @@ const TextContainer = style.div`
     background: rgba(23, 23, 23, 0.6);
 `;
 
-const TextTitle= style.span`
+const TextTitle = style.span`
 display : flex;
 justify-content : center;
 align-items : center;
@@ -56,7 +65,7 @@ color: #FFFFFF;
 `;
 
 const Button = style.div`
-    display : ${props=>props.count > 1 ? 'flex' : 'none'};
+    display : ${(props) => (props.count > 1 ? "flex" : "none")};
     justify-content:center;
     align-items:center;
     width: 34vw;
@@ -76,45 +85,44 @@ const Button = style.div`
     z-index : 9000;
     `;
 
-    const HealingComponent = ({count,setCount,onClick}) => {
-        const [image, setImage] = useState('https://sopt-27-wooyeong.s3.ap-northeast-2.amazonaws.com/images/soptkerthon/healing/image054.jpg'); 
-        console.log('초기화')
-        //const [count,setCount] = useState(0);
-    
-            useEffect(() => {
-                const getImage = async () => {
-                    const axiosPosts = await axios.get('http://52.78.212.95:3000/api/healings');
-                    // console.log('통신 : ', axiosPosts);
-                    const randomImage = axiosPosts.data.data;
-                    setImage(randomImage);
-                    setCount()
-                    // setCount(count => count+1);
-                    
-                }
-                setInterval(getImage, 4000);
-                //return () => clearInterval(id);
-            }, []);
+const HealingComponent = ({ count, setCount, onClick }) => {
+  const [image, setImage] = useState(
+    "https://sopt-27-wooyeong.s3.ap-northeast-2.amazonaws.com/images/soptkerthon/healing/image054.jpg",
+  );
+  console.log("초기화");
+  //const [count,setCount] = useState(0);
 
-    
-    return(
-        <>
-            <Container url={image}>
-                <TextContainer>
-                    <TextTitle>
-                    당신은 유노윤호가 아닙니다.
-                    </TextTitle>
-                    <TextSubTitle>
-                    “오늘 하루를 열심히 살잖아? 그럼 내일이 힘들어져”
-                    </TextSubTitle>
-                    <TextSubTitle2>
-                    - 유노웅앵 -
-                    </TextSubTitle2>
+  useEffect(() => {
+    const getImage = async () => {
+      const axiosPosts = await axios.get(
+        "http://52.78.212.95:3000/api/healings",
+      );
+      // console.log('통신 : ', axiosPosts);
+      const randomImage = axiosPosts.data.data;
+      setImage(randomImage);
+      setCount();
+      // setCount(count => count+1);
+    };
+    setInterval(getImage, 4000);
+    //return () => clearInterval(id);
+  }, []);
 
-                </TextContainer>
-                <Button count = {count} onClick = {onClick}>건너뛰기</Button>
-            </Container>
-        </>
-    );
-}
+  return (
+    <>
+      <Container url={image}>
+        <TextContainer>
+          <TextTitle>당신은 유노윤호가 아닙니다.</TextTitle>
+          <TextSubTitle>
+            “오늘 하루를 열심히 살잖아? 그럼 내일이 힘들어져”
+          </TextSubTitle>
+          <TextSubTitle2>- 유노웅앵 -</TextSubTitle2>
+        </TextContainer>
+        <Button count={count} onClick={onClick}>
+          건너뛰기
+        </Button>
+      </Container>
+    </>
+  );
+};
 
 export default HealingComponent;

@@ -81,6 +81,8 @@ const Modal = ({ isClick, history }) => {
   const [minute, setMinute] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
   const [second, setSecond] = useState(0); // 0으로 초기화 바뀌는 state부분을 생각
   const [mili, setMili] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [buttonText, setButtonText] = useState("멈추면 보이는 것들");
 
   const tmp = useRef(); // 변경가능한 값을 담고 있는 상자
   const onAutoIncrease = () => {
@@ -91,20 +93,26 @@ const Modal = ({ isClick, history }) => {
   };
   // react에서 Interval 사용할때 아래와 같이 사용해아함
   useEffect(() => {
+    // if (paused) {
     tmp.current = onAutoIncrease;
+    // }
   });
 
   useEffect(() => {
     function tick() {
-      tmp.current();
+      if (!paused) {
+        tmp.current();
+      }
     }
     let id = setInterval(tick, 2);
     return () => clearInterval(id);
-  }, []);
+  }, [paused]);
 
   const onHandleClick = (e) => {
     e.preventDefault();
-    history.push("/healing");
+    setButtonText("이제 조금 쉬어요 :)");
+    setPaused((prev) => !prev);
+    setTimeout(() => history.push("/healing"), 3000);
   };
 
   return (
@@ -122,7 +130,7 @@ const Modal = ({ isClick, history }) => {
               {mili.toLocaleString().padStart(3, "0")}
             </TimeContainer>
           </ModalContainer>
-          <Button onClick={onHandleClick}>멈추면 보이는 것들</Button>
+          <Button onClick={onHandleClick}>{buttonText}</Button>
         </Wrap>
       </BackContainer>
     </>
